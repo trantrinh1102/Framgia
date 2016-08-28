@@ -1,0 +1,38 @@
+<% provide(:title, 'All users') %>
+<div class="row">
+  <div class="col-md-3">
+    <h3 class="text-center"><%= t "user.all" %>.</h3>
+  </div>
+  <div class="col-md-6 col-md-offset-2">
+    <%= form_tag(users_path, method: :get, id: "search-form") do %>
+      <div class="input-group col-md-8">
+        <%= text_field_tag :search, params[:search],
+          class: "search-query form-control", placeholder: t("user.search") %>
+        <span class="input-group-btn">
+          <%= button_tag type: "submit", class: "btn btn-danger" do %>
+            <i class="glyphicon glyphicon-search"></i>
+          <% end %>
+        </span>
+      </div>
+    <% end %>
+  </div>
+</div>
+<% if @users.present? %>
+  <ul class="users">
+    <% @users.in_groups_of(Settings.users_colume, false)
+      .each do |group_user| %>
+      <div class="row">
+        <div class="col-md-9">
+          <% group_user.each do |user| %>
+            <li>
+              <%= gravatar_for user, size: 50 %>
+              <%= link_to user.name, user %>
+            </li>
+           <% end %>
+        </div>
+       </div>
+    <% end %>
+  </ul>
+<% else %>
+  <h3><%= t "user.no_result" %>.</h3>
+<% end %>

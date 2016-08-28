@@ -1,10 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-  end
-
-  def help
-  end
-
-  def about
+    if logged_in?
+      @user = current_user
+    end
   end
 end

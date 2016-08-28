@@ -21,3 +21,58 @@
 
 en:
   hello: "Hello world"
+  static_page:
+    home: "Home"
+    signup: "Sign up"
+    signin: "Sign in"
+    logout: "Logout"
+    elearning: "Elearning"
+    title: "Elearning System"
+    about: "About"
+    contact: "Contact"
+    edit_user: "User update"
+    settings: "Settings"
+    profile: "Profile"
+    all_user: "users"
+  user:
+    signup: "Create my account"
+    passconfir: "Confirm your password"
+    gender:
+      female: "Female"
+      male: "Male"
+      select: "Select"
+      gender_holder: "Gender"
+    activity: "Activities"
+    word: "Word"
+    lesson: "Lesson"
+    update: "Update your profile"
+    save: "Save changes"
+    avatar: "Change avatar"
+    no_result: "No results"
+    search: "Search User"
+    all: "All users"
+    follow: "Follow"
+    unfollow: "UnFolow"
+    view_profile: "View my profile"
+    following_title: "Following"
+    follower_title: "Followers"
+  flash:
+    success:
+      Signup: "Sign up successfully!"
+      update: "Profile updated successfully"
+    danger:
+      user_not_exist: "User not exist"
+  error: "error"
+  message_err: "The form contains"
+  sessions:
+    new:
+      login: "Log In"
+    login_fail: "Email or password is invalid."
+  word:
+    index:
+      title: "List Word"
+      filter: "Filter words"
+      search: "Search"
+      all: "All"
+      not_learned: "Not learned"
+      learned: "Learned"

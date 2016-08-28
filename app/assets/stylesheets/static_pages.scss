@@ -1,3 +1,82 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+#header {
+  color: #FFFFFF;
+  a{
+    color: #FFFFFF;
+  }
+  a:hover, .container:hover
+  {
+    background-color: #3498db;
+  }
+}
+.dropdown-menu {
+  background-color: #34495e;
+}
+#header  nav{
+  background:#34495e;
+  padding-top:10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+}
+#header img{
+  height: 10%;
+  width: 10%;
+}
+
+#header ul{
+  padding-right: 50px;
+}
+
+#content {
+  height: 60px
+}
+/*footer*/
+#footer {
+  position: relative;
+  background: #2c3e50;
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer a{
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+#footer ul{
+  padding-top: 5px;
+}
+
+.page-content{
+  padding-top: 100px;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  padding-top: 10px;
+  padding-bottom: 200px;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-top: 50px;
+  li {
+    border: 1px solid $gray-lighter;
+    float: left;
+    width: 300px;
+    margin: 2px;
+  }
+}
+#search-form{
+  padding-top: 20px;
+}

@@ -1,0 +1,17 @@
+<div id="follow_form">
+  <% unless current_user? @user %>
+    <% if current_user.following? @user %>
+      <div id="unfollow_btn">
+        <button class="btn btn-primary" id="id_btn_unfollow"
+          value="<%= @user.id %>">
+          <%= t "user.unfollow" %></button>
+      </div>
+    <% else %>
+      <div id="follow_btn">
+        <button class="btn btn-primary" id="id_btn_follow"
+          value="<%= @user.id %>">
+          <%= t "user.follow" %></button>
+      </div>
+    <% end %>
+  <% end %>
+</div>

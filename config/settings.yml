@@ -1,0 +1,4 @@
+per_page: 30
+word_colume: 3
+users_colume: 3
+search_words: {learned: "true", not_learn: "false", all: ""}

@@ -1,0 +1,35 @@
+<% provide(:title, @title) %>
+<div class="container">
+  <div class="col-md-3 user-info">
+      <div class="row">
+        <%= gravatar_for @user %>
+        <h3><%= @user.name %></h3>
+        <span><%= link_to t("user.view_profile"), @user %></span>
+      </div>
+      <div class="row">
+        <section class="stats">
+        <%= render "shared/stats" %>
+      </section>
+      </div>
+  </div>
+  <div class="col-md-12">
+    <h3><%= @title %></h3>
+    <% if @users.present? %>
+      <ul class="users">
+        <% @users.in_groups_of(Settings.users_colume, false)
+          .each do |group_user| %>
+          <div class="row">
+            <div class="col-md-12">
+              <% group_user.each do |user| %>
+                <li>
+                  <%= gravatar_for user, size: 50 %>
+                  <%= link_to user.name, user %>
+                </li>
+               <% end %>
+            </div>
+           </div>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

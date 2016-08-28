@@ -1,0 +1,26 @@
+<div class="page-word-content">
+  <h2 class="text-center"><%= t "word.index.title" %></h2>
+  <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading text-center">
+        <%= t "word.index.filter" %>
+      </div>
+      <div class="panel-body">
+        <%= render "form_search" %>
+      </div>
+    </div>
+  </div>
+    <div class="table-word">
+      <% @words.in_groups_of(Settings.word_colume, false).
+        each do |group_word| %>
+        <div class="row row-table-word">
+          <% group_word.each do |word| %>
+            <div class="col-md-4 text-center word-content">
+              <%= word.content %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <%= will_paginate @words %>
+</div>
